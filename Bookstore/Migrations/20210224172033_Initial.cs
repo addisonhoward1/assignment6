@@ -17,6 +17,7 @@ namespace Bookstore.Migrations
                     AuthorFirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AuthorLastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Publisher = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Pagenum = table.Column<int>(type: "int", nullable: false),
                     Classification = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Category = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false)

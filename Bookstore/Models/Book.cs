@@ -33,6 +33,9 @@ namespace Bookstore.Models
         public string Publisher { get; set; }
 
         [Required]
+        public int Pagenum { get; set; }
+
+        [Required]
         public string Classification { get; set; }
 
         [Required]
@@ -42,6 +45,5 @@ namespace Bookstore.Models
         // user must enter the price in the correct 00.00 format
         [DataType(DataType.Currency, ErrorMessage = "Please enter a valid monetary value")]
         public double Price { get; set; }
-
     }
 }

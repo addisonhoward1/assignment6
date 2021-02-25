@@ -58,8 +58,10 @@ namespace Bookstore
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    "pagination",
+                    "P{page}", //changes the url path names to be like P2, P3, etc
+                    new { Controller = "Home", action = "Index" });
+                endpoints.MapDefaultControllerRoute();
             });
 
             SeedDatabase.EnsurePopulated(app); //gets the seed data from seeddatabase.cs file
